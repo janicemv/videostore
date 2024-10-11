@@ -16,7 +16,7 @@ DEFAULT CHARSET = utf8mb4;
 
 CREATE TABLE IF NOT EXISTS `videotheek_dvds` (
   `DVD_nummer` INT NOT NULL AUTO_INCREMENT,
-  `film_id` INT UNSIGNED NOT NULL,  -- Alterado para UNSIGNED
+  `film_id` INT UNSIGNED NOT NULL,  
   `statusId` INT NOT NULL,
   PRIMARY KEY (`DVD_nummer`),
   INDEX `fk_dvds_dvd_aanwezig1_idx` (`statusId` ASC),
