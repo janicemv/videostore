@@ -1,12 +1,8 @@
 # PHP MVC – The Video Library
 
-### Notes
-
-### Tasks
-
 A video library has a significant number of DVDs. Each DVD contains one movie. Each individual DVD is assigned a unique number. It goes without saying that there can be multiple copies of a movie.
 
-As a web developer, you are asked to write a web application that enables staff to manage this movie collection. The application provides the following functionalities:
+The application provides the following functionalities:
 
 - [x] **Display an overview of all movies, sorted alphabetically by title**
   - [x] title
