@@ -1,11 +1,11 @@
-CREATE TABLE IF NOT EXISTS `cursusphp`.`videotheek_status` (
+CREATE TABLE IF NOT EXISTS `videotheek_status` (
   `statusId` INT NOT NULL,
   `status` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`statusId`)
 ) ENGINE = InnoDB
 DEFAULT CHARSET = utf8mb4;
 
-CREATE TABLE IF NOT EXISTS `cursusphp`.`videotheek_films` (
+CREATE TABLE IF NOT EXISTS `videotheek_films` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `titel` VARCHAR(150) NOT NULL,
   `duurtijd` INT UNSIGNED NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `cursusphp`.`videotheek_films` (
 AUTO_INCREMENT = 19
 DEFAULT CHARSET = utf8mb4;
 
-CREATE TABLE IF NOT EXISTS `cursusphp`.`videotheek_dvds` (
+CREATE TABLE IF NOT EXISTS `videotheek_dvds` (
   `DVD_nummer` INT NOT NULL AUTO_INCREMENT,
   `film_id` INT UNSIGNED NOT NULL,  -- Alterado para UNSIGNED
   `statusId` INT NOT NULL,
@@ -23,12 +23,12 @@ CREATE TABLE IF NOT EXISTS `cursusphp`.`videotheek_dvds` (
   INDEX `fk_dvds_films1_idx` (`films_id` ASC),
   CONSTRAINT `fk_dvds_dvd_aanwezig1`
     FOREIGN KEY (`statusId`)
-    REFERENCES `cursusphp`.`videotheek_status` (`statusId`)
+    REFERENCES `videotheek_status` (`statusId`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_dvds_films1`
     FOREIGN KEY (`film_id`)
-    REFERENCES `cursusphp`.`videotheek_films` (`id`)
+    REFERENCES `videotheek_films` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION
 ) ENGINE = InnoDB

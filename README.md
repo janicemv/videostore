@@ -1,67 +1,63 @@
-# Extra opdracht PHP MVC – De videotheek 
+# PHP MVC – The Video Library
 
-### Notities
+### Notes
 
-_Ik heb deze oefening gemaakt zoals ik het systeem zou willen gebruiken. Dus zijn er minder keuzelijsts en meer links om de informatie gemakkelijker te krijgen en veranderen._
+### Tasks
 
+A video library has a significant number of DVDs. Each DVD contains one movie. Each individual DVD is assigned a unique number. It goes without saying that there can be multiple copies of a movie.
 
-### Taken
+As a web developer, you are asked to write a web application that enables staff to manage this movie collection. The application provides the following functionalities:
 
-Een videotheek beschikt over een aanzienlijke hoeveelheid DVD’s. Op elke DVD staat één film. Elke afzonderlijke DVD werd van een uniek nummer voorzien. Het spreekt vanzelf dat er verschillende exemplaren van een film kunnen zijn. 
+- [x] **Display an overview of all movies, sorted alphabetically by title**
+  - [x] title
+  - [x] DVD numbers (ids)
+  - [x] how many copies are available in the video library
 
-Als webontwikkelaar wordt jou gevraagd een webapplicatie te schrijven die de medewerkers in staat stelt deze filmcollectie te beheren. De applicatie voorziet in de volgende mogelijkheden: 
+- The first column contains the title of the movie.  
+- The second column contains the numbers of all DVDs that bear this title.  
+- The third column shows how many copies of this title are currently available in the video library.  
+- The available numbers are displayed in bold in the second column.
 
-**[X] Een overzicht van alle films weergeven, alfabetisch gerangschikt per titel**
+- [x] **Search by number**
 
-[X] titel
-[X] nummers van DVDs (ids)
-[X] hoeveel in de videotheek
+Result: Title | Number(s) | Copies available
 
-De eerste kolom bevat de titel van de film. 
-De tweede kolom bevat de nummers van alle DVD’s die deze titel dragen. 
-De derde kolom toont aan hoeveel exemplaren van deze titel er op het moment aanwezig zijn in de videotheek. 
-De nummers die aanwezig zijn worden in het vet getoond in de tweede kolom.
+- [x] **Enter a new title.**
 
-**[X] Zoeken op nummer**
+- A title is requested.  
+- Provide an error message if the title already exists.  
+- There are no copies available of this title after creation.
 
-Resultaat: Titel | Nummer(s) | Exemplaren aanwezig
+- [x] **Enter a new copy of a title.**
 
-**[X] Invoeren van een nieuwe titel.**
+- _A dropdown list of all titles is displayed, and a copy number must be entered.  
+- Provide an error message if the copy number already exists.  
+- Both a title from the list must be selected and a number must be entered.  
+- A new copy is initially available in the video library._
 
-Er wordt gevraagd naar een titel. 
-Zorg voor een foutmelding als de titel reeds bestaat. 
-Er zijn na aanmaak nog geen exemplaren beschikbaar van deze titel. 
+- I have added an option in the movie list because the DVD number is automatically regenerated in the database.
 
-**[X] Invoeren van een nieuw exemplaar van een titel.**
+- [x] **Remove a title.**
 
-_Er wordt een keuzelijst getoond van alle titels, en er dient een exemplaarnummer ingegeven te worden. 
-Zorg voor een foutmelding als het exemplaarnummer reeds bestaat. 
-Er moet zowel een titel uit de lijst geselecteerd als een nummer ingegeven worden. 
-Een nieuw exemplaar is in eerste instantie aanwezig in de videotheek._
+- A title must be chosen from a dropdown list.  
+- All copies of this title will be deleted simultaneously.
 
-Ik heb een optie in de filmlijst gezet want de DVDnummer is automatisch regenereerd in de DB.
+- [x] **Remove a copy.**
 
-**[X] Verwijderen van een titel.**
+- A number must be chosen from a dropdown list of the numbers of all copies.
 
-Er moet een titel gekozen worden uit een keuzelijst. 
-Alle exemplaren van deze titel worden tegelijk mee verwijderd. 
+- [x] **Rent a movie.**
 
-**[X] Verwijderen van een exemplaar.**
+- The number of the copy is entered, after which this copy is no longer available in the video library.
 
-Er moet een nummer gekozen worden uit een keuzelijst van de nummers van alle exemplaren. 
+- [x] **Return a movie.**
 
-**[X] Een film huren.**
+- The number of the returned copy is entered, after which it is available again in the video library.
 
-Het nummer van het exemplaar wordt ingegeven, waarna dit exemplaar niet meer aanwezig is in de videotheek. 
+- [x] All these functionalities must be selectable from a main menu, which is displayed when the application is called.
 
-**[X] Een film terugbrengen.**
+**Extension**
 
-Het nummer van het teruggebrachte exemplaar wordt ingegeven, waarna het opnieuw aanwezig is in de videotheek. 
- 
-[X] Al deze mogelijkheden moeten kunnen gekozen worden uit een hoofdmenu, dat wordt getoond op het moment dat de applicatie opgeroepen wordt.
- 
-**Uitbreiding**
+- [x] Ensure that a database keeps a list of users and their passwords.
 
-[X] Zorg ervoor dat in de databank een lijst van gebruikers en hun wachtwoorden wordt bijgehouden. 
-
-[X] Breid de applicatie uit zodat, vooraleer het hoofdmenu verschijnt en er een taak kan uitgevoerd worden, de bediende zich moet aanmelden met zijn persoonlijke gebruikersnaam en wachtwoord. 
+- [x] Extend the application so that, before the main menu appears and a task can be executed, the employee must log in with their personal username and password.
